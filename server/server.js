@@ -1,5 +1,5 @@
 import app from "./app";
-import { PORT } from "./config";
+import { PORT } from "./configs/index";
 
 const server = app.listen(PORT, err => {
     if (err) console.log(err);

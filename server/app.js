@@ -1,12 +1,14 @@
 import Koa from "koa";
-import bodyParser from "koa-bodyparser";
 
+import connectors from "./connectors";
+import middlewares from "./middlewares";
 import modules from "./modules";
+
+connectors();
 
 const app = new Koa();
 
-app.use(bodyParser());
-
+middlewares(app);
 app.use(modules);
 
 app.use(async ctx => {

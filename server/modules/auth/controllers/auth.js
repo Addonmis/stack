@@ -2,7 +2,7 @@ import bcrypt from "bcrypt-as-promised";
 import jwt from "jsonwebtoken";
 
 import { SECRET } from "../../../configs/index";
-import maria from "../../../configs/mariadb";
+import { maria } from "../../../connectors";
 import validation from "../../../services/auth_validator";
 
 export const sign_in = async (ctx) => {
